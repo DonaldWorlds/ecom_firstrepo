@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">  </script>
+
+
+    <title>Coin.it</title>
+
+
+
+    <style>
+        body {
+            background-color: black;
+            font-family: "Monaco", "Courier New", monospace;
+            color: coral;
+        }
+
+
+
+        div.card-body {
+            margin: 75px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 285px;
+            padding: 10px;
+        }
+
+        div.card-body img {
+            width: 100%;
+            height: 190px;
+
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        div.card-body:hover {
+            border: 1px solid greenyellow;
+        }
+
+
+        footer {
+            clear: both;
+            position: relative;
+            height: 200px;
+            margin-top: -200px;
+        }
+
+        header {
+            text-align: center;
+            background-color: rgb(2, 66, 2);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>Coin.it</header>
+
+
+    <!--*+*+NAV BAR+*+*-->
+
+    <nav class="navbar navbar-expand-lg bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/money-bag-gf3644ede7_640.png" alt="money bags" width="50px" height="50px">
+            </a>
+
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Products
+                        </a>
+
+
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="products.html">Products 1</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="products2.html">Products 2</a></li>
+                            <hr class="dropdown-divider">
+                            <li><a class="dropdown-item" href="products3.html">Products 3</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+
+                </ul>
+
+
+                <div class="fs-4 mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="currentColor"
+                        class="bi bi-cart" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z">
+                        </path>
+                        <span class="countedItem">0</span>
+                    </svg>
+                    <button type="button" class="btn btn-warning" onclick="clearAll()">Clear Cart</button>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <!--*+*+products+*+*-->
+
+    <div class="card-body" id="item">
+        <img src="images/dollars79.jpg" alt="Cinque Terre">
+        <h5 class="card-title">DropShipping Package</h5>
+        <p class="card-text">Start dropshipping today<br>$50</p>
+        <button type="button" class="btn btn-primary addToCart">Add To Cart</button>
+    </div>
+
+
+
+    <div class="card-body">
+        <img src="images/pexels-pixabay-534229.jpg" alt="Forest">
+        <h5 class="card-title">Ebook Package</h5>
+        <p class="card-text">Create an ebook today<br>$50</p>
+        <button type="button" class="btn btn-primary addToCart">Add To Cart</button>
+    </div>
+
+
+    <div class="card-body">
+        <img src="images/pexels-alexander-mils-2068975.jpg" alt="Northern Lights">
+        <h5 class="card-title">Blogger Package</h5>
+        <p class="card-text">Get started in blogging today <br>$50</p>
+        <button type="button" class="btn btn-primary addToCart">Add To Cart</button>
+    </div>
+
+
+
+
+
+    <div class="card-body">
+        <img src="images/pexels-john-guccione-wwwadvergroupcom-3531895.jpg" alt="Mountains">
+        <h5 class="card-title">Stocks Package</h5>
+        <p class="card-text">Start investing in stocks today <br>$50</p>
+        <button type="button" class="btn btn-primary addToCart">Add To Cart</button>
+    </div>
+
+
+    <div class="card-body">
+        <img src="images/money-making-g2afe82ff9_640.jpg" alt="Cinque Terre">
+        <h5 class="card-title">Create a course Package</h5>
+        <p class="card-text">We can help in building any type of course <br>$50</p>
+        <button type="button" class="btn btn-primary addToCart">Add To Cart </button>
+    </div>
+
+    <div class="card-body">
+        <img src="images/pexels-karolina-grabowska-4386154.jpg" alt="Forest">
+        <h5 class="card-title">Retail Property Package</h5>
+        <p class="card-text">We help in assisting clients in get Property <br>$50</p>
+        <button type="button" class="btn btn-primary addToCart">Add To cart</button>
+    </div>
+
+    <div class="card-body">
+        <img src="images/pexels-karolina-grabowska-4386442.jpg" alt="Northern Lights">
+        <h5 class="card-title">Youtuber Package</h5>
+        <p class="card-text">We give people opportunity to become a Youtuber <br>$50</p>
+        <button type="button" class="btn btn-primary addToCart">Add To Cart</button>
+    </div>
+
+    <div class="card-body">
+        <img src="images/pexels-karolina-grabowska-4968653.jpg" alt="Mountains">
+        <h5 class="card-title">Crypto Package</h5>
+        <p class="card-text"> We help people who want to be Crypto millionaire <br>$50</p>
+        <button type="button" class="btn btn-primary addToCart">Add To Cart</button>
+    </div>
+
+
+
+    <div class="card-body">
+        <img src="images/pexels-karolina-grabowska-4968663.jpg" alt="Cinque Terre">
+        <h5 class="card-title">Farmland Package</h5>
+        <p class="card-text">We help people who want to have a business in Farmland <br>$50</p>
+        <button type="button" class="btn btn-primary addToCart">Add To Cart</button>
+    </div>
+
+    <div class="card-body">
+        <img src="images/pexels-karolina-grabowska-4386373.jpg" alt="Forest">
+        <h5 class="card-title">Photography Package</h5>
+        <p class="card-text">We help people who want to take pictures <br>$50</p>
+        <button type="button" class="btn btn-primary addToCart">Add To Cart</button>
+    </div>
+
+
+
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">© 2022 Coin.it, Inc</p>
+
+            <a href="/"
+                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap">
+                </svg>
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="index.html" class="nav-link px-2 active">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link px-2 active">About US</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link px-2 active">Contact</a></li>
+            </ul>
+        </footer>
+    </div>
+    <!--Theses are is the links to my website-->
+
+    <script src="main.js">
+
+    </script>
+</body>
+
+</body>
+
+</html>
